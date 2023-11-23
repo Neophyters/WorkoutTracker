@@ -6,7 +6,7 @@ function App() {
   const [isWorkoutPlan, setIsWorkoutPlan] = useState<boolean>(false);
   return (
     <div className="App">
-      Welcome to the Workout Planner!
+      Welcome to the Workout Planner!!
       <Button></Button>
       <WorkoutPlan></WorkoutPlan>
     </div>
