@@ -14,6 +14,9 @@ const Navbar: FC<NavbarProps> = () => {
         <Link to={"/workoutPlan"}>
             <h2>Workout Plan</h2>
         </Link>
+        <Link to={"/strengthTracker"}>
+            <h2>Strength Tracker</h2>
+        </Link>
         <Link to={"/profile"}>
             <h2>Profile</h2>
         </Link>
