@@ -17,6 +17,9 @@ const Navbar: FC<NavbarProps> = () => {
         <Link to={"/profile"}>
             <h2>Profile</h2>
         </Link>
+        <Link to={"/login"}>
+            <h2>Login</h2>
+        </Link>
       </div>
     </nav>
    );
