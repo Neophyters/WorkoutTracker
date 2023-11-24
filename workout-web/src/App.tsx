@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
-import WorkoutPlan from './components/WorkoutPlan/WorkoutPlan';
-import { Button } from "react-bootstrap";
+import { Outlet } from "react-router";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [isWorkoutPlan, setIsWorkoutPlan] = useState<boolean>(false);
   return (
-    <div className="App">
-      Welcome to the Workout Planner!!
-      <Button></Button>
-      <WorkoutPlan></WorkoutPlan>
-    </div>
+    <>
+      <Navbar />
+      <Outlet />
+    </>
   );
 }
 
