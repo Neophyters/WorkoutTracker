@@ -9,7 +9,7 @@ const Navbar: FC<NavbarProps> = () => {
     <nav className="navbar">
       <div className="nav-links">
         <Link to={'/'}>
-            <h2>Home Page</h2> 
+            <h2>Home</h2> 
         </Link>
         <Link to={"/workoutPlan"}>
             <h2>Workout Plan</h2>
