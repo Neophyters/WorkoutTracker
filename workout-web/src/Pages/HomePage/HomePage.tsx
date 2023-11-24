@@ -4,7 +4,8 @@ interface HomePageProps {}
 
 const HomePage: FC<HomePageProps> = () => {
    return (
-   <div>Hello this is the Home Page!!
+   <div>
+        <h1 style={{ textAlign: 'center' }}>Hello this is the Home Page!!</h1>
    </div>
    );
 };

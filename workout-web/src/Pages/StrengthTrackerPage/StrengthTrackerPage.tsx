@@ -4,7 +4,9 @@ interface StrengthTrackerPageProps {}
 
 const StrengthTrackerPage: FC<StrengthTrackerPageProps> = () => {
    return (
-   <div>Track Your Strength
+   <div>
+            <h1 style={{ textAlign: 'center' }}>Track Your Strength!!</h1>
+
    </div>
    );
 };

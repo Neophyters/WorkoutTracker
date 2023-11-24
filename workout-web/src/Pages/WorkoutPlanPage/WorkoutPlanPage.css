@@ -1,0 +1,17 @@
+.workout-plan-grid {
+    display: flex;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .workout-plan-grid > * {
+    flex: 1;
+    margin: 8px;
+    border-right: 1px solid #ddd; /* Add a border to the right of each column */
+  }
+  
+  .workout-plan-grid > *:last-child {
+    border-right: none; /* Remove the border from the last column */
+  }
+  

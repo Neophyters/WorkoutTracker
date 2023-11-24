@@ -12,7 +12,7 @@ const LoginPage: FC<LoginPageProps> = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       {showLogin ? (
         <div>
           <LoginForm />

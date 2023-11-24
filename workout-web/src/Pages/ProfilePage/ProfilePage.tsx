@@ -4,7 +4,8 @@ interface ProfilePageProps {}
 
 const ProfilePage: FC<ProfilePageProps> = () => {
    return (
-   <div>Hello this is the Profile Page
+   <div>
+        <h1 style={{ textAlign: 'center' }}>Your Profile</h1>
    </div>
    );
 };
