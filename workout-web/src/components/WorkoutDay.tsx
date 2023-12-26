@@ -1,15 +1,27 @@
 import React, { FC } from 'react';
 import ExerciseComponent from './ExerciseComponent';
 
-interface WorkoutDayProps {}
-
-const WorkoutDay: FC<WorkoutDayProps> = () => {
-    
+//add the interface for the props
+//the prop I want is from WorkoutPlanPage.tsx which is the day of the week
+//I want to pass in the day of the week to this component
+//the day of the week is the string variable called curDay
+export const WorkoutDay = ({
+   curDay
+}: {
+   curDay: string;
+}) => {
+   
+   //function to save the day
+   const saveDay = () => {
+      console.log('save day');
+   };
    return (
-   <div>YOOO Workout DAY!!!
+   <div>
+      <h1>{curDay}</h1>
     <ExerciseComponent></ExerciseComponent>
+    <button onClick={saveDay}>Save</button>
+
    </div>
    );
 };
 
-export default WorkoutDay;

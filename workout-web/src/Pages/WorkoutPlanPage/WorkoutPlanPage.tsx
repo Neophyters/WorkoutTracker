@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import WorkoutDay from '../../components/WorkoutDay';
 import './WorkoutPlanPage.css'; // Import your CSS file for styling
 import { Button } from 'react-bootstrap';
+import { WorkoutDay } from '../../components/WorkoutDay';
 
 interface WorkoutPlanPageProps {}
 
@@ -10,10 +10,13 @@ const WorkoutPlanPage: FC<WorkoutPlanPageProps> = () => {
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   //make a react hook to show true or false of a state
   const [isPopUp, setIsPopUp] = useState(false);
+  const [curDay, setCurDay] = useState('');
 
   // Function to edit the day
-  const editDay = () => {
+  //pass in a string value of the day
+  const editDay = (currentDay: string) => {
     setIsPopUp(true);
+    setCurDay(currentDay);
   };
 
   // Function to close the pop up
@@ -28,7 +31,7 @@ const WorkoutPlanPage: FC<WorkoutPlanPageProps> = () => {
         {daysOfWeek.map((day, index) => (
           <div key={index} style={{ textAlign: 'center' }}>
             <h1>{day}</h1>
-            <Button onClick={editDay}>Edit Day</Button>
+            <Button onClick={() => editDay(day)}>Edit Day</Button>
           </div>
         ))}
       </div>
@@ -36,6 +39,7 @@ const WorkoutPlanPage: FC<WorkoutPlanPageProps> = () => {
                 <div className="popup-container">
                     <div className="popup">
                         <WorkoutDay
+                            curDay={curDay}
                         ></WorkoutDay>
                         <button onClick={closePopUp}>Close</button>
                     </div>
