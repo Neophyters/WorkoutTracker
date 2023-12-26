@@ -4,8 +4,8 @@ export interface Exercise {
     sets: number;
     reps: number;
     // prevWeight: number;
-    currWeight: number;
-    restTime: number;
+    curWeight: number;
+    restTime: string;
     notes: string;
     // video: string; //change datatype in the future
 }

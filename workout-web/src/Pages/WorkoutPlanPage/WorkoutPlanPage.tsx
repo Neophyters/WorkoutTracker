@@ -8,7 +8,6 @@ interface WorkoutPlanPageProps {}
 const WorkoutPlanPage: FC<WorkoutPlanPageProps> = () => {
   // Array of day names
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-  //make a react hook to show true or false of a state
   const [isPopUp, setIsPopUp] = useState(false);
   const [curDay, setCurDay] = useState('');
 

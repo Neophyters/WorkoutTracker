@@ -1,9 +1,14 @@
 import React, { FC, useState } from "react";
+import { Exercise } from "../interfaces/exercise";
 
 export const ExerciseComponent = ({
   closeExercise,
+  exerciseList,
+  setExerciseList,
 }: {
   closeExercise: () => void;
+  exerciseList: Exercise[];
+  setExerciseList: React.Dispatch<React.SetStateAction<Exercise[]>>;
 }) => {
   const [exerciseName, setExerciseName] = useState("");
   const [sets, setSets] = useState("");
@@ -15,6 +20,16 @@ export const ExerciseComponent = ({
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     // Handle form submission logic here
+    const newExercise: Exercise = {
+      exerciseName: exerciseName,
+      sets: parseInt(sets),
+      reps: parseInt(reps),
+      curWeight: parseInt(weight),
+      restTime: restTime,
+      notes: notes,
+    };
+    setExerciseList([...exerciseList, newExercise]);
+
     closeExercise();
   };
 
