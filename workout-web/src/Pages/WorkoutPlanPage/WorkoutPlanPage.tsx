@@ -40,8 +40,8 @@ const WorkoutPlanPage: FC<WorkoutPlanPageProps> = () => {
                     <div className="popup">
                         <WorkoutDay
                             curDay={curDay}
+                            closePopUp={closePopUp}
                         ></WorkoutDay>
-                        <button onClick={closePopUp}>Close</button>
                     </div>
                     <div className="background-overlay"></div>
                 </div>

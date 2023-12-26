@@ -23,13 +23,6 @@ const ExerciseComponent: FC<ExerciseProps> = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
 
-      {/* Display your exercises based on the search results */}
-      <div>
-        {/* Your exercise list goes here */}
-        <p>Exercise 1</p>
-        <p>Exercise 2</p>
-        {/* ... */}
-      </div>
     </div>
   );
 };
