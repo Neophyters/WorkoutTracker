@@ -1,10 +1,11 @@
 export interface Exercise {
-    workoutName: string;
-    targetMuscles: string; //another Interface later
+    exerciseName: string;
+    // targetMuscles: string; //another Interface later
     sets: number;
     reps: number;
-    prevWeight: number;
+    // prevWeight: number;
     currWeight: number;
     restTime: number;
-    video: string; //change datatype in the future
+    notes: string;
+    // video: string; //change datatype in the future
 }
