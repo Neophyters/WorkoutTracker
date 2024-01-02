@@ -1,56 +1,117 @@
-.workout-plan-grid {
-    display: flex;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .workout-plan-grid > * {
-    flex: 1;
-    margin: 8px;
-    border-right: 1px solid #ddd; /* Add a border to the right of each column */
-  }
-  
-  .workout-plan-grid > *:last-child {
-    border-right: none; /* Remove the border from the last column */
-  }
-  
-  .popup-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    /* used to scroll */
-    overflow: auto;
-}
-
-.popup {
-  background-color: #24252a;
+.workout-plan-container {
   padding: 20px;
-  z-index: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 20px;
-  color: white;
-  /* makes popup fill entire screen */
-  min-height: 100vh;
+  background: #f7f7f7;
 }
 
-.background-overlay {
+.workout-plan-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2em; /* Increased bottom margin */
+  font-size: 2em; /* Larger font size for heading */}
+
+.workout-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px; 
+  text-align: left;
+}
+
+.day-container {
+  background: #E1E1E1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3; /* Subtle border */
+  transition: transform 0.2s ease; 
+}
+
+.day-container:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.day-heading {
+  color: #1F4E79; /* Color that stands out */
+  margin-bottom: 1em; /* Increased spacing */
+  font-size: 1.5em; /* Larger font size for day headings */
+  padding-bottom: .5em; /* Padding to separate from content */
+  border-bottom: 2px solid #f0f0f0; /* Subtle separation */
+}
+
+.exercise-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.exercise-name {
+  color: #1F4E79; /* Color that stands out */
+  font-size: 1.1em; /* Slightly larger font */
+  margin-bottom: 0.5em; 
+}
+
+.exercise-attribute {
+  color: #555;
+  margin: 5px 0;
+}
+
+.exercise-attribute strong {
+  color: #333;
+  font-weight: normal;
+}
+
+.exercise-notes {
+  font-style: italic;
+  color: #888; /* Lighter color for notes */
+  margin-top: 10px; 
+}
+
+.edit-day-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: -15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1F4E79;
+  color: white;
+  font-size: 1em;
+  box-shadow: none;
+}
+
+.edit-day-button:hover {
+  background-color: #3C7CB6;
+  box-shadow: none;
+}
+
+.popup-container {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  z-index: -1; /* Push the overlay behind the popup */
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
