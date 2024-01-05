@@ -1,13 +1,13 @@
-package com.Neophyters.workoutapp;
+package com.Neophyters.workoutappproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WorkoutAppApplication {
+public class WorkoutAppProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WorkoutAppApplication.class, args);
+		SpringApplication.run(WorkoutAppProjectApplication.class, args);
 	}
 
 }

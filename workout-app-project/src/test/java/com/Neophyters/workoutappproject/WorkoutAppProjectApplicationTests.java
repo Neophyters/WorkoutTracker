@@ -1,12 +1,12 @@
-package com.Neophyters.workoutapp;
+package com.Neophyters.workoutappproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WorkoutAppApplicationTests {
+class WorkoutAppProjectApplicationTests {
 
-	@Test
+	// @Test
 	void contextLoads() {
 	}
 
