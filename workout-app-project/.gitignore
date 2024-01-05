@@ -33,4 +33,3 @@ build/
 .vscode/
 
 ### SQL Database ###
-src/main/resources/application.properties
