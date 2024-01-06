@@ -10,7 +10,7 @@ public class DotenvLoader {
 
     public static void loadDotenv() {
         try {
-            List<String> lines = Files.readAllLines(Paths.get(".env"));
+            List<String> lines = Files.readAllLines(Paths.get("workout-app-project\\.env"));
             for (String line : lines) {
                 String[] parts = line.split("=", 2);
                 if (parts.length == 2) {
