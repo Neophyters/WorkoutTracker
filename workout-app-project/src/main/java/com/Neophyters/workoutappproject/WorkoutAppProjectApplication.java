@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WorkoutAppProjectApplication {
 
 	public static void main(String[] args) {
+		DotenvLoader.loadDotenv();
 		SpringApplication.run(WorkoutAppProjectApplication.class, args);
 	}
 
