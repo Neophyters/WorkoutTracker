@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import './WorkoutPlanPage.css'; // Import your CSS file for styling
 import { Button } from 'react-bootstrap';
-import { WorkoutDay } from '../../components/WorkoutDay';
+import { WorkoutDay } from './WorkoutDay';
 import { Exercise } from '../../interfaces/exercise';
 
 interface WorkoutPlanPageProps {}
