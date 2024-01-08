@@ -15,7 +15,10 @@ export const router = createBrowserRouter([
             {path: "workoutPlan", element: <WorkoutPlanPage />},
             {path: "profile", element: <ProfilePage />},
             {path: "login", element: <LoginPage />},
-            {path: "strengthTracker", element: <StrengthTrackerPage />}
+            {path: "strengthTracker", element: <StrengthTrackerPage />},
+            {path: "*", element: <div style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <h1>404 Error: Page Not Found</h1>
+            </div>}
         ]
     }
 ])
